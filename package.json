@@ -1,0 +1,20 @@
+{
+  "name": "alg_push_swap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit",
+    "start": "node index.js",
+    "cli": "node index.js --cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.epitech.eu:/romain.lebesle@epitech.eu/ALG_Push_Swap"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.13.0"
+  }
+}
