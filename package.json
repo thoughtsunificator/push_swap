@@ -1,20 +1,23 @@
 {
-  "name": "alg_push_swap",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "nodeunit",
-    "start": "node index.js",
-    "cli": "node index.js --cli"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@git.epitech.eu:/romain.lebesle@epitech.eu/ALG_Push_Swap"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^7.13.0"
-  }
+	"name": "push_swap",
+	"version": "1.0.0",
+	"description": "Sorting algorithm",
+	"main": "index.js",
+	"scripts": {
+		"test": "nodeunit",
+		"start": "node index.js",
+		"cli": "node index.js --cli"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thoughtsunificator/push_swap"
+	},
+	"bugs": {
+		"url": "https://github.com/thoughtsunificator/push_swap/issues"
+	},
+	"author": "Romain Lebesle <oss@thoughtsunificator.me> (https://thoughtsunificator.me)",
+	"license": "MIT",
+	"devDependencies": {
+		"eslint": "^7.13.0"
+	}
 }
