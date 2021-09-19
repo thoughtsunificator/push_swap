@@ -1,33 +1,28 @@
-let push_swap = require("../src/push_swap")
-constant = require("../lib/constant") // rotate method needs constant
+const assert = require("assert")
+const push_swap = require("../src/push_swap")
+constant = require("../lib/constant")
 
-exports.push = function(test) {
-	test.expect(2)
+it("push", function() {
 	let listA = [1]
 	let listB = []
 	push_swap.push(listB, listA)
-	test.deepEqual(listB, [1])
-	test.equal(listA.length, 0)
-	test.done()
-}
+	assert.deepEqual(listB, [1])
+	assert.strictEqual(listA.length, 0)
+})
 
-exports.swap = function(test) {
-	test.expect(1)
+it("swap", function() {
 	let listA = [1, 2]
 	push_swap.swap(listA)
-	test.deepEqual(listA, [2, 1])
-	test.done()
-}
+	assert.deepEqual(listA, [2, 1])
+})
 
-exports.rotate = function(test) {
-	test.expect(2)
+it("rotate", function() {
 	// backward
 	let listA = [1, 2, 3]
 	push_swap.rotate(listA, constant.BACKWARD)
-	test.deepEqual(listA, [2, 3, 1])
+	assert.deepEqual(listA, [2, 3, 1])
 	// forward
 	listA = [1, 2, 3]
 	push_swap.rotate(listA, constant.FORWARD)
-	test.deepEqual(listA, [3, 1, 2])
-	test.done()
-}
+	assert.deepEqual(listA, [3, 1, 2])
+})

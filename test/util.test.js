@@ -1,25 +1,20 @@
-let util = require("../src/util")
+const assert = require("assert")
+const util = require("../src/util")
 
-exports.getIndexOfSmallest = function(test) {
-	test.expect(3)
-	test.equals(util.getIndexOfSmallest([1, 2 ,3]), 0)
-	test.equals(util.getIndexOfSmallest([1, 2, -3]), 2)
-	test.equals(util.getIndexOfSmallest([1, 0, 3]), 1)
-	test.done()
-}
+it("getIndexOfSmallest", function() {
+	assert.strictEqual(util.getIndexOfSmallest([1, 2 ,3]), 0)
+	assert.strictEqual(util.getIndexOfSmallest([1, 2, -3]), 2)
+	assert.strictEqual(util.getIndexOfSmallest([1, 0, 3]), 1)
+})
 
-// exports.getPositions = function(test) {
-// 	test.expect(3)
-// 	test.equals(util.getPositions([-1, -2, -3]))
-// 	test.equals(util.getPositions([1, 2, 3]), true)
-// 	test.equals(util.getPositions([1, 2, 3]), true)
-// 	test.done()
-// }
+// it("getPositions", function() {
+// 	assert.strictEqual(util.getPositions([-1, -2, -3]))
+// 	assert.strictEqual(util.getPositions([1, 2, 3]), true)
+// 	assert.strictEqual(util.getPositions([1, 2, 3]), true)
+// })
 
-exports.isArraySorted = function(test) {
-	test.expect(3)
-	test.equals(util.isArraySorted([1, 2, 3]), true)
-	test.equals(util.isArraySorted([1, 3, 2]), false)
-	test.equals(util.isArraySorted([-1, -2, -3]), false)
-	test.done()	
-}
+it("isArraySorted", function() {
+	assert.strictEqual(util.isArraySorted([1, 2, 3]), true)
+	assert.strictEqual(util.isArraySorted([1, 3, 2]), false)
+	assert.strictEqual(util.isArraySorted([-1, -2, -3]), false)
+})
